@@ -47,7 +47,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button14 = new System.Windows.Forms.Button();
             this.BtnTC = new System.Windows.Forms.Button();
-            this.reportDocument1 = new CrystalDecisions.CrystalReports.Engine.ReportDocument();
             this.button16 = new System.Windows.Forms.Button();
             this.BtnT1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticles)).BeginInit();
@@ -64,6 +63,7 @@
             this.BtnT7.TabStop = false;
             this.BtnT7.Text = "7";
             this.BtnT7.UseVisualStyleBackColor = false;
+            this.BtnT7.Click += new System.EventHandler(this.BtnT7_Click);
             // 
             // BtnT0
             // 
@@ -140,6 +140,7 @@
             this.BtnT8.TabStop = false;
             this.BtnT8.Text = "8";
             this.BtnT8.UseVisualStyleBackColor = false;
+            this.BtnT8.Click += new System.EventHandler(this.BtnT8_Click);
             // 
             // BtnT5
             // 
@@ -152,6 +153,7 @@
             this.BtnT5.TabStop = false;
             this.BtnT5.Text = "5";
             this.BtnT5.UseVisualStyleBackColor = false;
+            this.BtnT5.Click += new System.EventHandler(this.BtnT5_Click);
             // 
             // BtnT6
             // 
@@ -164,6 +166,7 @@
             this.BtnT6.TabStop = false;
             this.BtnT6.Text = "6";
             this.BtnT6.UseVisualStyleBackColor = false;
+            this.BtnT6.Click += new System.EventHandler(this.BtnT6_Click);
             // 
             // BtnT9
             // 
@@ -176,6 +179,7 @@
             this.BtnT9.TabStop = false;
             this.BtnT9.Text = "9";
             this.BtnT9.UseVisualStyleBackColor = false;
+            this.BtnT9.Click += new System.EventHandler(this.BtnT9_Click);
             // 
             // dgvArticles
             // 
@@ -235,6 +239,7 @@
             this.TxtEcranSaisie.ForeColor = System.Drawing.Color.GreenYellow;
             this.TxtEcranSaisie.Location = new System.Drawing.Point(48, 20);
             this.TxtEcranSaisie.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtEcranSaisie.MaxLength = 5;
             this.TxtEcranSaisie.Name = "TxtEcranSaisie";
             this.TxtEcranSaisie.ReadOnly = true;
             this.TxtEcranSaisie.Size = new System.Drawing.Size(876, 63);
@@ -364,7 +369,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button BtnTC;
-        private CrystalDecisions.CrystalReports.Engine.ReportDocument reportDocument1;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button BtnT1;
     }

@@ -17,6 +17,42 @@ namespace CashDesk.Forms
             InitializeComponent();
         }
 
+        private void BtnT0_Click(object sender, EventArgs e)
+        {
+            DisplayDigit(0);
+        }
 
+
+       
+
+        private void DisplayDigit(int digit)
+        {
+            TxtEcranSaisie.Text += digit.ToString();
+        }
+
+        private void BtnT1_Click(object sender, EventArgs e)
+        {
+            DisplayDigit(1);
+        }
+
+        private void BtnTC_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnT3_Click(object sender, EventArgs e)
+        {
+            DisplayDigit(3);
+        }
+
+        private void BtnT4_Click(object sender, EventArgs e)
+        {
+            DisplayDigit(4);
+        }
+
+        private void BtnT2_Click(object sender, EventArgs e)
+        {
+            DisplayDigit(2);
+        }
     }
 }

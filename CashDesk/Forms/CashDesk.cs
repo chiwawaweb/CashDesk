@@ -16,5 +16,7 @@ namespace CashDesk.Forms
         {
             InitializeComponent();
         }
+
+
     }
 }

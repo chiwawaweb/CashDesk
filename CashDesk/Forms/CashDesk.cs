@@ -7,14 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CashDesk.DAL;
 
 namespace CashDesk.Forms
 {
     public partial class CashDesk : Form
     {
+
+        ArticleProvider articleProvider = new ArticleProvider();
+
         public CashDesk()
         {
             InitializeComponent();
+            articleProvider.GetAll();
         }
 
         private void BtnT0_Click(object sender, EventArgs e)

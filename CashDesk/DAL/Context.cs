@@ -10,26 +10,29 @@ namespace CashDesk.DAL
 {
     public class Context : DbContext
     {
-        public DbSet<Article> articles { get; set; }
-
         public Context() : base("DefaultConnection")
         {
             Database.SetInitializer<Context>(new ContextInitializer());
         }
 
+        public DbSet<Article> articles { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Article>();
+            //modelBuilder.Entity<Article>();
             
         }
 
-        public class ContextInitializer : DropCreateDatabaseIfModelChanges<Context>
-        {
-            protected override void Seed(Context context)
-            {
-                base.Seed(context);
+        
+    }
 
-                Article[] Articles =
+    public class ContextInitializer : DropCreateDatabaseIfModelChanges<Context>
+    {
+        protected override void Seed(Context context)
+        {
+            base.Seed(context);
+
+            Article[] Articles =
             {
                 /*
                 new Article { Reference="KDL32W510", Designation="TV 102CM SONY LED F-HD", Qte=1, PuTTC=295.99, offres=Offres[0]},
@@ -42,10 +45,9 @@ namespace CashDesk.DAL
                 */
             };
 
-                foreach (Article article in Articles)
-                {
-                    context.articles.Add(article);
-                }
+            foreach (Article article in Articles)
+            {
+                context.articles.Add(article);
             }
         }
     }

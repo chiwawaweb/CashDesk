@@ -23,14 +23,14 @@ namespace CashDesk.DTO
         [Column("PUTTC")]
         public double PuTTC { get; set; }
         [Required]
-        [Column("OFFRE_ID")]
-        public int OffreId { get; set; }
-        /*
+        [Column("TICKET_ID")]
+        public int TicketId { get; set; }
+        
         [Required]
-        [ForeignKey("OffreId")]
-        public virtual Offre offres { get; set; }
-    */    
-    [ConcurrencyCheck]
+        [ForeignKey("TicketId")]
+        public virtual Ticket Tickets { get; set; }
+        
+        [ConcurrencyCheck]
         [Column("VERSIONING")]
         public int? Versioning { get; set; }
     }

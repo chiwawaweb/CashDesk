@@ -19,7 +19,22 @@ namespace CashDesk.DAL
             {
                 try
                 {
-                    return context.articles.ToList();
+                    return context.Articles.ToList();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
+
+        public int CountAll()
+        {
+            using (Context context = new Context())
+            {
+                try
+                {
+                    return context.Articles.Count();
                 }
                 catch
                 {

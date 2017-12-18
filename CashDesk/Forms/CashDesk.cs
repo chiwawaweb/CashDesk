@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
+//using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CashDesk.DAL;
+using CashDesk.DTO;
+using System.Data.Entity;
 
 namespace CashDesk.Forms
 {
@@ -19,7 +21,7 @@ namespace CashDesk.Forms
         public CashDesk()
         {
             InitializeComponent();
-            articleProvider.GetAll();
+            articleProvider.CountAll();
         }
 
         private void BtnT0_Click(object sender, EventArgs e)
@@ -85,5 +87,6 @@ namespace CashDesk.Forms
         {
             DisplayDigit(9);
         }
+
     }
 }
